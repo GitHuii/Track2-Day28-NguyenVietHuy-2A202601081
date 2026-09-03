@@ -2,6 +2,35 @@
   "feedback": {
     "history": [
       {
+        "version": 8,
+        "operation": "MERGE",
+        "timestamp": "2026-09-03T14:50:46.612000+00:00",
+        "metrics": {
+          "numTargetRowsCopied": "11",
+          "numTargetRowsDeleted": "0",
+          "numTargetBytesRemoved": "7737",
+          "numTargetDeletionVectorsAdded": "0",
+          "numTargetRowsMatchedUpdated": "12",
+          "numTargetRowsMatchedDeleted": "0",
+          "numTargetRowsUpdated": "12",
+          "numTargetChangeFilesAdded": "0",
+          "numTargetRowsNotMatchedBySourceDeleted": "0",
+          "rewriteTimeMs": "5024",
+          "numTargetFilesAdded": "1",
+          "numTargetBytesAdded": "9140",
+          "executionTimeMs": "123764",
+          "materializeSourceTimeMs": "5489",
+          "numTargetRowsInserted": "8",
+          "numTargetDeletionVectorsUpdated": "0",
+          "scanTimeMs": "112881",
+          "numOutputRows": "31",
+          "numTargetDeletionVectorsRemoved": "0",
+          "numTargetRowsNotMatchedBySourceUpdated": "0",
+          "numSourceRows": "20",
+          "numTargetFilesRemoved": "1"
+        }
+      },
+      {
         "version": 7,
         "operation": "MERGE",
         "timestamp": "2026-09-03T13:42:56.686000+00:00",
@@ -214,10 +243,11 @@
     "time_travel": {
       "table": "feedback",
       "earliest_version": 0,
-      "latest_version": 7,
+      "latest_version": 8,
       "earliest_rows": 0,
-      "latest_rows": 25,
+      "latest_rows": 33,
       "operations": [
+        "MERGE",
         "MERGE",
         "MERGE",
         "MERGE",
@@ -231,6 +261,35 @@
   },
   "documents": {
     "history": [
+      {
+        "version": 8,
+        "operation": "MERGE",
+        "timestamp": "2026-09-03T14:51:09.089000+00:00",
+        "metrics": {
+          "numTargetRowsCopied": "13",
+          "numTargetRowsDeleted": "0",
+          "numTargetBytesRemoved": "13938",
+          "numTargetDeletionVectorsAdded": "0",
+          "numTargetRowsMatchedUpdated": "13",
+          "numTargetRowsMatchedDeleted": "0",
+          "numTargetRowsUpdated": "13",
+          "numTargetChangeFilesAdded": "0",
+          "numTargetRowsNotMatchedBySourceDeleted": "0",
+          "rewriteTimeMs": "678",
+          "numTargetFilesAdded": "1",
+          "numTargetBytesAdded": "14915",
+          "executionTimeMs": "12747",
+          "materializeSourceTimeMs": "64",
+          "numTargetRowsInserted": "3",
+          "numTargetDeletionVectorsUpdated": "0",
+          "scanTimeMs": "11790",
+          "numOutputRows": "29",
+          "numTargetDeletionVectorsRemoved": "0",
+          "numTargetRowsNotMatchedBySourceUpdated": "0",
+          "numSourceRows": "16",
+          "numTargetFilesRemoved": "1"
+        }
+      },
       {
         "version": 7,
         "operation": "MERGE",

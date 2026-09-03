@@ -83,7 +83,12 @@ class Completion:
 def _auth_headers(settings: VLLMSettings) -> dict[str, str]:
     """Build the auth header. The value is read at call time and never logged."""
     key = settings.api_key
-    return {"Authorization": f"Bearer {key}"} if key else {}
+    headers = {"Authorization": f"Bearer {key}"} if key else {}
+    # Bypass localtunnel warning page for Kaggle tunnel (IP07 gate)
+    # loca.lt serves a reminder page unless this header is present; real vLLM
+    # clients must send it, otherwise /version returns HTML and the gate fails.
+    headers["Bypass-Tunnel-Reminder"] = "true"
+    return headers
 
 
 def probe_identity(settings: VLLMSettings, *, timeout: float = 5.0) -> VLLMIdentity:

@@ -5,6 +5,12 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .playwright-mcp/
-# evidence/ kept for submission — do not ignore (was evidence/)
-# readiness-report.json is generated separately; keep ignored
 readiness-report.json
+# secrets / tunnel overrides — never commit (Track2-Day28)
+.env
+.env.*
+ports.override.env
+*.ngrok
+*.tunnel
+ngrok.yml
+loca.lt.json

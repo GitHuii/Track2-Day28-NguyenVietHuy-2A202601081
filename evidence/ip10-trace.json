@@ -1,40 +1,48 @@
 {
-  "trace_id": "1da33ab6c0e441acaa562552086bd7cc",
-  "traceparent": "00-1da33ab6c0e441acaa562552086bd7cc-8f5a58966a664d49-01",
+  "trace_id": "2d6b43ef9de34066b3f44a13ceadb846",
+  "traceparent": "00-2d6b43ef9de34066b3f44a13ceadb846-ce08948972364847-01",
   "span_names": [
+    "POST",
+    "POST /api/v1/ask",
     "POST /api/v1/ask http receive",
+    "POST /api/v1/ask http send",
     "POST /api/v1/documents",
     "POST /api/v1/documents http receive",
     "POST /api/v1/documents http send",
     "POST /api/v1/feedback",
     "POST /api/v1/feedback http receive",
     "POST /api/v1/feedback http send",
+    "lab28.airflow.dag",
+    "lab28.api.ask",
     "lab28.api.ingest",
+    "lab28.feast.get_online_features",
     "lab28.gateway.request",
     "lab28.kafka.produce",
-    "lab28.mlflow.resolve_release"
+    "lab28.mlflow.resolve_release",
+    "lab28.qdrant.query",
+    "lab28.vllm.chat_completion"
   ],
   "spans": [
     {
-      "operationName": "POST /api/v1/feedback http send"
+      "operationName": "POST"
     },
     {
-      "operationName": "POST /api/v1/documents http send"
+      "operationName": "POST /api/v1/ask"
     },
     {
-      "operationName": "lab28.kafka.produce"
+      "operationName": "POST /api/v1/ask http receive"
     },
     {
-      "operationName": "lab28.api.ingest"
+      "operationName": "lab28.mlflow.resolve_release"
     },
     {
-      "operationName": "POST /api/v1/feedback http send"
+      "operationName": "POST"
     },
     {
-      "operationName": "POST /api/v1/documents http send"
+      "operationName": "lab28.api.ask"
     },
     {
-      "operationName": "lab28.api.ingest"
+      "operationName": "POST /api/v1/ask"
     },
     {
       "operationName": "lab28.kafka.produce"
@@ -43,19 +51,52 @@
       "operationName": "lab28.gateway.request"
     },
     {
-      "operationName": "lab28.mlflow.resolve_release"
+      "operationName": "POST /api/v1/documents http send"
     },
     {
-      "operationName": "POST /api/v1/documents http receive"
+      "operationName": "lab28.feast.get_online_features"
+    },
+    {
+      "operationName": "lab28.vllm.chat_completion"
     },
     {
       "operationName": "POST /api/v1/documents http send"
     },
     {
-      "operationName": "POST /api/v1/ask http receive"
+      "operationName": "POST /api/v1/feedback http receive"
     },
     {
-      "operationName": "POST /api/v1/feedback http receive"
+      "operationName": "lab28.vllm.chat_completion"
+    },
+    {
+      "operationName": "POST /api/v1/ask http send"
+    },
+    {
+      "operationName": "POST /api/v1/ask http send"
+    },
+    {
+      "operationName": "POST"
+    },
+    {
+      "operationName": "lab28.api.ingest"
+    },
+    {
+      "operationName": "lab28.gateway.request"
+    },
+    {
+      "operationName": "lab28.airflow.dag"
+    },
+    {
+      "operationName": "lab28.mlflow.resolve_release"
+    },
+    {
+      "operationName": "POST"
+    },
+    {
+      "operationName": "POST /api/v1/ask http send"
+    },
+    {
+      "operationName": "POST /api/v1/ask http send"
     },
     {
       "operationName": "POST /api/v1/feedback http send"
@@ -64,7 +105,55 @@
       "operationName": "POST /api/v1/feedback"
     },
     {
+      "operationName": "lab28.qdrant.query"
+    },
+    {
+      "operationName": "POST"
+    },
+    {
+      "operationName": "lab28.feast.get_online_features"
+    },
+    {
+      "operationName": "lab28.gateway.request"
+    },
+    {
+      "operationName": "POST /api/v1/ask http send"
+    },
+    {
+      "operationName": "POST /api/v1/documents http send"
+    },
+    {
+      "operationName": "POST /api/v1/feedback http send"
+    },
+    {
+      "operationName": "lab28.api.ingest"
+    },
+    {
+      "operationName": "POST /api/v1/ask http receive"
+    },
+    {
+      "operationName": "POST"
+    },
+    {
+      "operationName": "lab28.api.ask"
+    },
+    {
+      "operationName": "lab28.qdrant.query"
+    },
+    {
+      "operationName": "POST /api/v1/ask http send"
+    },
+    {
+      "operationName": "POST /api/v1/documents http receive"
+    },
+    {
       "operationName": "POST /api/v1/documents"
+    },
+    {
+      "operationName": "POST /api/v1/feedback http send"
+    },
+    {
+      "operationName": "lab28.kafka.produce"
     },
     {
       "operationName": "lab28.gateway.request"

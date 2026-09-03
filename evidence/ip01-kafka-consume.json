@@ -1,0 +1,29 @@
+{
+  "topic": "data.raw",
+  "key": "trace-1da33a",
+  "partition": 2,
+  "offset": 44,
+  "headers": {
+    "idempotency-key": "trace-1da33a",
+    "traceparent": "00-1da33ab6c0e441acaa562552086bd7cc-9a30229d7e09ef4e-01",
+    "schema_version": "1"
+  },
+  "trace_id": "1da33ab6c0e441acaa562552086bd7cc",
+  "value": {
+    "schema_version": "1",
+    "event_id": "18c88284527c4a819b18d0aafa67a0e3",
+    "idempotency_key": "fb:trace-1da33a:667eaf36efc6bddd81c49e75f9b3acd5",
+    "entity_id": "trace-1da33a",
+    "occurred_at": "2026-09-03T13:56:54.268619Z",
+    "producer": "lab28-api",
+    "traceparent": "00-1da33ab6c0e441acaa562552086bd7cc-e633972c0ed00127-01",
+    "payload": {
+      "kind": "feedback",
+      "asker_id": "trace-1da33a",
+      "text": "Trace test for IP01+IP10 with dedicated trace and sufficient length to pass validation",
+      "rating": 5,
+      "locale": "vi",
+      "label": "positive"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "trace_id": "1da33ab6c0e441acaa562552086bd7cc",
+  "traceparent": "00-1da33ab6c0e441acaa562552086bd7cc-8f5a58966a664d49-01",
+  "span_names": [
+    "POST /api/v1/ask http receive",
+    "POST /api/v1/documents",
+    "POST /api/v1/documents http receive",
+    "POST /api/v1/documents http send",
+    "POST /api/v1/feedback",
+    "POST /api/v1/feedback http receive",
+    "POST /api/v1/feedback http send",
+    "lab28.api.ingest",
+    "lab28.gateway.request",
+    "lab28.kafka.produce",
+    "lab28.mlflow.resolve_release"
+  ],
+  "spans": [
+    {
+      "operationName": "POST /api/v1/feedback http send"
+    },
+    {
+      "operationName": "POST /api/v1/documents http send"
+    },
+    {
+      "operationName": "lab28.kafka.produce"
+    },
+    {
+      "operationName": "lab28.api.ingest"
+    },
+    {
+      "operationName": "POST /api/v1/feedback http send"
+    },
+    {
+      "operationName": "POST /api/v1/documents http send"
+    },
+    {
+      "operationName": "lab28.api.ingest"
+    },
+    {
+      "operationName": "lab28.kafka.produce"
+    },
+    {
+      "operationName": "lab28.gateway.request"
+    },
+    {
+      "operationName": "lab28.mlflow.resolve_release"
+    },
+    {
+      "operationName": "POST /api/v1/documents http receive"
+    },
+    {
+      "operationName": "POST /api/v1/documents http send"
+    },
+    {
+      "operationName": "POST /api/v1/ask http receive"
+    },
+    {
+      "operationName": "POST /api/v1/feedback http receive"
+    },
+    {
+      "operationName": "POST /api/v1/feedback http send"
+    },
+    {
+      "operationName": "POST /api/v1/feedback"
+    },
+    {
+      "operationName": "POST /api/v1/documents"
+    },
+    {
+      "operationName": "lab28.gateway.request"
+    }
+  ]
+}

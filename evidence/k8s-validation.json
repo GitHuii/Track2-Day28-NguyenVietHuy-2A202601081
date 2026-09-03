@@ -1,0 +1,20 @@
+{
+  "validate_manifests": "Kubernetes and GitOps manifest contracts passed",
+  "checks": [
+    "required kinds: Deployment, Service, ServiceAccount, ConfigMap, HorizontalPodAutoscaler, PodDisruptionBudget, NetworkPolicy, Gateway, HTTPRoute",
+    "Deployment runAsNonRoot true",
+    "container probes: readinessProbe, livenessProbe, resources, securityContext",
+    "image not :latest",
+    "Gateway/HTTPRoute apiVersion gateway.networking.k8s.io/v1",
+    "ArgoCD targetRevision refs/tags/v3.0.0 pinned (not HEAD/main)"
+  ],
+  "gitops": {
+    "application": "gitops/application.yaml",
+    "targetRevision": "refs/tags/v3.0.0",
+    "prune": true,
+    "selfHeal": true
+  },
+  "drift_rollback": "ArgoCD syncPolicy automated prune+selfHeal enables drift detection; rollback via changing targetRevision or kubectl rollout undo; evidence via git log and kubectl diff",
+  "ports": "ports.template validated, compose config --quiet 0 for core and full",
+  "portability": "OK host-path and shell independent"
+}

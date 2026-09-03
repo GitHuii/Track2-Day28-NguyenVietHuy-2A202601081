@@ -4,5 +4,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-evidence/
+.playwright-mcp/
+# evidence/ kept for submission — do not ignore (was evidence/)
+# readiness-report.json is generated separately; keep ignored
 readiness-report.json

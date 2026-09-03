@@ -1,0 +1,63 @@
+{
+  "trace_id": "1da33ab6c0e441acaa562552086bd7cc",
+  "traceparent": "00-1da33ab6c0e441acaa562552086bd7cc-8f5a58966a664d49-01",
+  "run_id": "trace-1da33a",
+  "gateway": {
+    "url": "http://localhost:8080",
+    "request_id": "6840b89a-4707-9460-af61-345df5052cc5",
+    "route": "/api/v1/feedback -> 202, /api/v1/documents -> 202"
+  },
+  "kafka": {
+    "topic": "data.raw",
+    "key": "trace-1da33a",
+    "partition": 2,
+    "offset": 44,
+    "headers": ["idempotency-key", "traceparent", "schema_version"],
+    "trace_propagated": true
+  },
+  "delta": {
+    "feedback_version": 7,
+    "feedback_rows": 25,
+    "documents_version": 7,
+    "documents_rows": 28,
+    "last_operation": "MERGE",
+    "time_travel": {"earliest": 0, "latest": 7}
+  },
+  "feast": {
+    "entity": "asker-001",
+    "feature_service": "asker_serving_v1",
+    "feedback_count": 2,
+    "delta_version": 6,
+    "freshness_seconds": 6183.11
+  },
+  "qdrant": {
+    "collection": "lab28_documents",
+    "points_total": 15,
+    "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0"
+  },
+  "mlflow": {
+    "model_name": "lab28-rag-release",
+    "champion_version": "3",
+    "run_id": "75ca282eb7954a2783192e30ca8baea6",
+    "delta_version": 6
+  },
+  "vllm": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "status": "unreachable (gate gpu, degraded mode expected for core)",
+    "detail": "not a verifiable vLLM server: unreachable: ConnectError"
+  },
+  "evidence_files": [
+    "ip01-kafka-consume.json",
+    "ip02-airflow-run.json",
+    "ip03-delta-history.json",
+    "ip04-feast-online.json",
+    "ip05-qdrant-search.json",
+    "ip06-mlflow-release.json",
+    "ip07-vllm-identity.json",
+    "ip08-gateway.json",
+    "ip09-prometheus-targets.json",
+    "ip09-grafana-dashboards.json",
+    "ip10-trace.json"
+  ],
+  "note": "Happy path: gateway stamped x-request-id and trace, Kafka preserved traceparent, Delta MERGE increased version 6->7 without duplicates, Feast served online features, Qdrant points searchable, MLflow champion v3 resolves, gateway rate limit and trace continuity verified, vLLM gate shows degraded as expected without GPU"
+}

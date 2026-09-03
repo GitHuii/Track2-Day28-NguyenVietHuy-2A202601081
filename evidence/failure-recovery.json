@@ -1,0 +1,13 @@
+{
+  "baseline": {
+    "ready": "degraded (vllm optional)"
+  },
+  "injected": "stop feast service",
+  "observed": "api /ready degraded, ask still returns degraded answer",
+  "recovered": "start feast, health 200, ready degraded->degraded (vllm still)",
+  "delta_before": 25,
+  "delta_after": 25,
+  "qdrant_before": 15,
+  "qdrant_after": 15,
+  "no_data_loss": true
+}
